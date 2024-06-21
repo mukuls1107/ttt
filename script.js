@@ -11,8 +11,8 @@ const struct = [
 ]
 info.textContent = `${go.toUpperCase()} Starts The Game`;
 
-
-function createGameBoard() {
+// Game Board IIFE
+(function () {
     struct.forEach((cell, index) => {
         const cellElement = document.createElement("div");
         cellElement.classList.add("square");
@@ -20,7 +20,7 @@ function createGameBoard() {
         cellElement.addEventListener("click", addGo);
         gameBoard.append(cellElement)
     })
-}
+})()
 
 function addGo() {
 
@@ -67,4 +67,3 @@ function checkScore() {
 newGame.addEventListener("click", ()=>{
     window.location.reload();
 });
-createGameBoard()
