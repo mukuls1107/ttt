@@ -3,6 +3,7 @@ console.log("Hello World!")
 const gameBoard = document.querySelector("#board")
 const info = document.querySelector("#info")
 const newGame = document.querySelector("#new-game")
+let song =new Audio("./audio.mp3")
 let go = "circle"
 const struct = [
     "", "", "",
@@ -46,7 +47,8 @@ function checkScore() {
         const circleWins = array.every(cell =>
             allSquares[cell].firstChild?.classList.contains("circle"))
         if (circleWins) {
-            info.textContent = `Circle Wins`;
+            info.textContent = `Circle Wins 🎉`;
+            song.play()
             allSquares.forEach(square => {
                 square.replaceWith(square.cloneNode(true))
             })
@@ -57,7 +59,8 @@ function checkScore() {
         const crossWins = array.every(cell =>
             allSquares[cell].firstChild?.classList.contains("cross"))
         if (crossWins) {
-            info.textContent = `Cross Wins`;
+            info.textContent = `Cross Wins 🎉`;
+            song.play()
             allSquares.forEach(square => {
                 square.replaceWith(square.cloneNode(true))
             })
