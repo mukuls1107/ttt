@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#board{
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.square{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.circle{
+    height: 90px;
+    width: 90px;
+    border:  solid 15px blue;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.cross{
+    height: 90px;
+    width: 90px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.cross:before , .cross:after{
+    content: "";
+    background-color: red;
+    position: absolute;
+}
+
+.cross:before{
+    left: 50%;
+    height: 100%;
+    width: 30%;
+    margin-left: -15%;
+}
+
+.cross:after{
+    top: 50%;
+    height: 30%;
+    width: 100%;
+    margin-top: -15%;
+}
+
+#btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column ;
+}
+
+button{
+    font-size: 22px;
+}
