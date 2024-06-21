@@ -6,6 +6,7 @@ body{
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #board{
@@ -75,3 +76,4 @@ body{
 button{
     font-size: 22px;
 }
+
